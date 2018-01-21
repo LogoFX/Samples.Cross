@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer" Version="1.2.1-rc2" />
+    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc2" />
+  </ItemGroup>
+
+</Project>
