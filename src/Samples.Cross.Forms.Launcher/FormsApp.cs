@@ -2,6 +2,7 @@
 using Caliburn.Micro.Xamarin.Forms;
 using LogoFX.Bootstrapping;
 using LogoFX.Client.Bootstrapping;
+using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Solid.Practices.IoC;
 using Xamarin.Forms;
 
@@ -21,7 +22,7 @@ namespace Samples.Cross.Forms.Launcher
                     .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>())
                     .Use(new RegisterViewModelsMiddleware<Bootstrapper>(new Type[] { }));
             bootstrapper.Initialize();
-            //DisplayRootViewFor<ShellViewModel>();
+            DisplayRootViewFor<ShellViewModel>();
         }
 
         protected override void PrepareViewFirst(NavigationPage navigationPage)

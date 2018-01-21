@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Caliburn.Micro.Xamarin.Forms">
       <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
     </Reference>
