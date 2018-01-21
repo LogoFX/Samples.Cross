@@ -164,6 +164,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Model\Samples.Cross.Model.csproj">
+      <Project>{bddec942-aac0-4f42-833f-7d1347177bd0}</Project>
+      <Name>Samples.Cross.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Cross.WPF.Presentation.Shell\Samples.Cross.WPF.Presentation.Shell.csproj">
       <Project>{6B7AD07E-4490-4137-B854-6F99F591EFCB}</Project>
       <Name>Samples.Cross.WPF.Presentation.Shell</Name>

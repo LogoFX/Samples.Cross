@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Model.Contracts\Samples.Cross.Model.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
