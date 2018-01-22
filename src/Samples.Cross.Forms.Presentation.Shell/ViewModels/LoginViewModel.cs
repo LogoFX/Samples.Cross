@@ -4,7 +4,11 @@ using Caliburn.Micro;
 using LogoFX.Client.Mvvm.Commanding;
 using Samples.Cross.Model.Contracts;
 
+#if NETSTANDARD2_0
 namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
+#elif NET
+namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
+#endif
 {
     class LoginViewModel : Screen
     {
