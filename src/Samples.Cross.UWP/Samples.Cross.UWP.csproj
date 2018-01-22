@@ -148,14 +148,41 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer">
+      <Version>1.2.1-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Core">
+      <Version>1.7.1-rc2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
+      <Project>{6f07f77f-aa28-4add-b0f8-a3cb67da21fe}</Project>
+      <Name>Samples.Cross.Forms.Launcher</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Cross\Samples.Cross.csproj">
       <Project>{F0A01E4B-CAFC-4B1A-8B7C-288C386FFA6F}</Project>
       <Name>Samples.Cross</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform">
+      <HintPath>..\Externals\Caliburn.Micro\uap10.0\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Xamarin.Forms, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
