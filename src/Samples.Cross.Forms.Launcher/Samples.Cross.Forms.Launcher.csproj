@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj" />
+    <ProjectReference Include="..\Samples.Cross.Model\Samples.Cross.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

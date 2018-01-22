@@ -5,11 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\MainView.xaml" />
     <None Remove="Views\ShellView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Views\ShellView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\MainView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Content>
   </ItemGroup>
@@ -24,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ShellView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

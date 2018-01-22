@@ -17,7 +17,9 @@ namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
             base.OnInitialize();
             //TODO: Use View Model factory
             var loginViewModel = new LoginViewModel(_loginService);
+            var mainViewModel = new MainViewModel();
             Items.Add(loginViewModel);
+            Items.Add(mainViewModel);
             ActivateItem(loginViewModel);
         }
     }

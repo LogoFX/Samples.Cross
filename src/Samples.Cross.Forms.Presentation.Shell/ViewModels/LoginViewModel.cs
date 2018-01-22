@@ -58,8 +58,9 @@ namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
                                {
                                    IsBusy = true;
                                    await _loginService.LoginAsync(UserName, Password);
-                                   //TODO: improve
-                                   (Parent as Conductor<object>.Collection.OneActive).DeactivateItem(this, false);
+                                   //TODO: improve     
+                                   var conductor = (Parent as Conductor<object>.Collection.OneActive);
+                                   conductor.ActivateItem(conductor.Items[1]);
                                }
 
                                catch (Exception ex)

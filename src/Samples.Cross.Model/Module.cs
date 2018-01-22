@@ -4,7 +4,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Cross.Model
 {
-    class Module : ICompositionModule<IDependencyRegistrator>
+    public class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {

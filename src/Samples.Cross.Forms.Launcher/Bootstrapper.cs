@@ -44,7 +44,7 @@ namespace Samples.Cross.Forms.Launcher
         public IEnumerable<Assembly> Assemblies => new Assembly[]
             {
                 Assembly.GetAssembly(typeof(ShellViewModel)),
-                //Assembly.GetAssembly(typeof(HelloXamarinForms.Model.Module)),
+                Assembly.GetAssembly(typeof(Samples.Cross.Model.Module)),
                 //Assembly.GetAssembly(typeof(HelloXamarinForms.Data.Fake.Providers.Module)),
                 //Assembly.GetAssembly(typeof(HelloXamarinForms.Data.Fake.ProviderBuilders.Module))
             };

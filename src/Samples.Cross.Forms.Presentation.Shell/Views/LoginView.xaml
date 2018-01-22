@@ -2,9 +2,121 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Samples.Cross.Forms.Presentation.Shell.Views.LoginView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms Login!" />
-      </StackLayout>
-  </ContentView.Content>
+    <Grid VerticalOptions="FillAndExpand"
+          HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0"
+                   Grid.Column="0"                   
+                   VerticalOptions="Center"
+                   Text="User Name:" />
+        <Entry Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="5,0,0,0" 
+                HeightRequest="21"
+                 VerticalOptions="Center"                 
+                 Text="{Binding Path=UserName, Mode=TwoWay}">
+            <!--TODO:Restore-->
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                    <actions:SetFocusAction />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+        </Entry>
+        <Frame Grid.Row="0"
+                Grid.Column="2"
+                Margin="5,0,5,0"               
+                WidthRequest="21"
+                HeightRequest="21"
+               BackgroundColor="Transparent"
+               OutlineColor="Black">
+            <Label VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Text="?" />
+        </Frame>
+
+        <Label Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalOptions="Center"
+                   Text="Password:" />
+        <Entry Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="5,0,0,0" 
+                     HeightRequest="21"
+                     VerticalOptions="Center"                     
+                     Text="{Binding Path=Password, Mode=TwoWay}"
+                     />
+        <!--TODO:Restore-->
+        <!--<PasswordBox Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="5,0,0,0" 
+                     Height="21"
+                     VerticalAlignment="Center"
+                     AutomationProperties.AutomationId="Login_Password"
+                     behaviors:PasswordHelper.BindPassword="True"
+                     behaviors:PasswordHelper.BoundPassword="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+        <Frame Grid.Row="1"
+                Grid.Column="2"
+                Margin="5,0,5,0"
+                WidthRequest="21"
+                HeightRequest="21"
+                BackgroundColor="Transparent"               
+                OutlineColor="Black">
+            <Label VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Text="?" />
+        </Frame>
+
+        <!--<CheckBox Grid.Row="2"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  Content="Save Password"
+                  VerticalAlignment="Center"
+                  IsChecked="{Binding Path=SavePassword, Mode=TwoWay}" />-->
+
+        <Label 
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   VerticalOptions="Center"
+                   TextColor="Red"
+                   Text="{Binding Path=LoginFailureCause, Mode=OneWay}" />
+
+        <Grid Grid.Row="5" 
+              Grid.Column="0" 
+              Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding Path=LoginCommand, Mode=OneWay}"                   
+                    Text="Login">
+            </Button>
+
+            <Button Grid.Column="2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding Path=LoginCancelCommand, Mode=OneWay}"
+                    Text="Cancel">
+            </Button>
+        </Grid>
+    </Grid>
 </ContentView>
