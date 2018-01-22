@@ -92,6 +92,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Bridge.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -161,6 +162,14 @@
     <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
       <Project>{6f07f77f-aa28-4add-b0f8-a3cb67da21fe}</Project>
       <Name>Samples.Cross.Forms.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj">
+      <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
+      <Name>Samples.Cross.Forms.Presentation.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
+      <Project>{0aee7a5f-8299-4c7c-b5c9-062a25fcb139}</Project>
+      <Name>Samples.Cross.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Cross\Samples.Cross.csproj">
       <Project>{F0A01E4B-CAFC-4B1A-8B7C-288C386FFA6F}</Project>
