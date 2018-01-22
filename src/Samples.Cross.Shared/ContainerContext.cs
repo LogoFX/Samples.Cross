@@ -8,12 +8,12 @@ namespace Samples.Cross.Shared
     {
         private static readonly ExtendedSimpleContainerAdapter _instance = new ExtendedSimpleContainerAdapter();
 
-        public static IDependencyRegistrator Registrator { get => _instance; }
+        public static IDependencyRegistrator Registrator => _instance;
 
         //TODO: Remove explicit service location - it's used on one occasion only
-        public static IDependencyResolver Resolver { get => _instance; }
+        public static IDependencyResolver Resolver => _instance;
 
         //TODO: Move all associated logic to the dedicated bootstrapper
-        public static IBootstrapperAdapter Adapter { get => _instance; }
+        public static IBootstrapperAdapter Adapter => _instance;
     }
 }
