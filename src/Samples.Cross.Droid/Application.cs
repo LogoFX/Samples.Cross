@@ -1,24 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Android.App;
+using Android.Runtime;
 using Caliburn.Micro;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Samples.Cross.Shared;
 
-namespace Samples.Cross.iOS
+namespace Samples.Cross.Droid
 {
-    public class CaliburnAppDelegate : CaliburnApplicationDelegate
+    [Application]
+    public class Application : CaliburnApplication
     {
-        public CaliburnAppDelegate()
+        public Application(IntPtr javaReference, JniHandleOwnership transfer)
+            : base(javaReference, transfer)
         {
+
+        }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
             Initialize();
         }
 
         protected override void Configure()
         {
             ContainerContext.Registrator.RegisterInstance(ContainerContext.Registrator);
-            ContainerContext.Registrator.RegisterSingleton<FormsApp>();           
+            ContainerContext.Registrator.RegisterSingleton<FormsApp>();            
         }
 
         protected override void BuildUp(object instance)
@@ -42,7 +52,7 @@ namespace Samples.Cross.iOS
                 new[]
                 {                    
                     //TODO: Needed for views to be registered - consider using this manually in the bootstrapper
-                    typeof(ShellViewModel).Assembly
+                    Assembly.GetAssembly(typeof(ShellViewModel))
                 };
         }
     }
