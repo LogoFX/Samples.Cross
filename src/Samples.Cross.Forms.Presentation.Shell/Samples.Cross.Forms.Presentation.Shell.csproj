@@ -15,7 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.Commanding.Core" Version="1.1.1-rc3" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Model.Contracts\Samples.Cross.Model.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,5 +33,11 @@
     <Reference Include="Caliburn.Micro">
       <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\LoginView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
