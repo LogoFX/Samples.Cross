@@ -11,5 +11,7 @@ namespace Samples.Cross.WPF.Launcher
             : base(new ExtendedSimpleContainerAdapter())
         {
         }
+        
+        //TODO: Add to the bootstrapper option of setting initial window size
     }
 }

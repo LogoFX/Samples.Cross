@@ -3,7 +3,7 @@ using Samples.Cross.Model.Contracts;
 
 namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
 {
-    public class ShellViewModel : Conductor<object>
+    public class ShellViewModel : Conductor<object>.Collection.OneActive
     {
         private readonly ILoginService _loginService;
 
@@ -14,8 +14,11 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
 
         protected override void OnInitialize()
         {
-            base.OnInitialize();
-            _loginService.LoginAsync("username", "pass");
+            base.OnInitialize();    
+            //TODO: Use View Model factory
+            var loginViewModel = new LoginViewModel(_loginService);
+            Items.Add(loginViewModel);
+            ActivateItem(loginViewModel);
         }
     }
 }
