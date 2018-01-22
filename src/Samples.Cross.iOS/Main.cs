@@ -12,4 +12,5 @@ namespace Samples.Cross.iOS
             UIApplication.Main(args, null, "AppDelegate");
         }
     }
+     
 }

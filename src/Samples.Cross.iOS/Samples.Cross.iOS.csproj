@@ -159,24 +159,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Cross.csproj">
-      <Project>{6E3DD426-0149-40A2-975E-9DA92B5A11F6}</Project>
-      <Name>Samples.Cross</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
-      <Project>{0AEE7A5F-8299-4C7C-B5C9-062A25FCB139}</Project>
-      <Name>Samples.Cross.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
-      <Project>{6F07F77F-AA28-4ADD-B0F8-A3CB67DA21FE}</Project>
-      <Name>Samples.Cross.Forms.Launcher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj">
-      <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
-      <Name>Samples.Cross.Forms.Presentation.Shell</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
@@ -195,6 +177,20 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CaliburnAppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
+      <Project>{6F07F77F-AA28-4ADD-B0F8-A3CB67DA21FE}</Project>
+      <Name>Samples.Cross.Forms.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj">
+      <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
+      <Name>Samples.Cross.Forms.Presentation.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
+      <Project>{0AEE7A5F-8299-4C7C-B5C9-062A25FCB139}</Project>
+      <Name>Samples.Cross.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets')" />

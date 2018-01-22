@@ -15,7 +15,7 @@ namespace Samples.Cross.Forms.Launcher
         public FormsApp(IDependencyRegistrator dependencyRegistrator)
         {
             Initialize();
-
+                       
             _dependencyRegistrator = dependencyRegistrator;
             var bootstrapper =
                 new Bootstrapper(_dependencyRegistrator)

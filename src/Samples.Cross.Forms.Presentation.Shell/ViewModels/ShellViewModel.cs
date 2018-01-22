@@ -1,6 +1,8 @@
-﻿namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
+﻿using Caliburn.Micro;
+
+namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
 {
-    public class ShellViewModel
+    public class ShellViewModel : PropertyChangedBase
     {
     }
 }

@@ -24,4 +24,9 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro">
+      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

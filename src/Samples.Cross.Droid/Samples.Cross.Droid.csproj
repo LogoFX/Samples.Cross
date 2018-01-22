@@ -162,10 +162,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Cross.csproj">
-      <Project>{6E3DD426-0149-40A2-975E-9DA92B5A11F6}</Project>
-      <Name>Samples.Cross</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
       <Project>{6F07F77F-AA28-4ADD-B0F8-A3CB67DA21FE}</Project>
       <Name>Samples.Cross.Forms.Launcher</Name>
