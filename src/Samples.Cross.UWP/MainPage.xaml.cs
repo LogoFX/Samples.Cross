@@ -7,7 +7,7 @@ namespace Samples.Cross.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
            
             LoadApplication(ContainerContext.Resolver.Resolve<FormsApp>());
         }

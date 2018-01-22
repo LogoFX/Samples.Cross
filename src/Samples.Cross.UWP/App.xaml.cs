@@ -40,7 +40,7 @@ namespace Samples.Cross.UWP
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
             if (args.PreviousExecutionState == ApplicationExecutionState.Running)
-                return;
+                return;            
 
             Xamarin.Forms.Forms.Init(args);
 
