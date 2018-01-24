@@ -4,10 +4,41 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewModels="clr-namespace:Samples.Cross.WPF.Presentation.Shell.ViewModels"
-             d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
+             xmlns:cal="http://www.caliburnproject.org"
+             d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <TextBlock Text="You made it dude" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView ItemsSource="{Binding WiFiNetworks}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl cal:View.Model="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Label Content="Selected item:" />
+            <Label Content="{Binding SelectedItem.Model.Name, Mode=OneWay}"/>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <Button Content="Connect" Margin="5" Command="{Binding ConnectCommand}"/>
+                <Button Content="Disconnect" Margin="5" Command="{Binding DisconnectCommand}"/>
+                <Button Content="Clear" Margin="5" Command="{Binding ClearSelectionCommand}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Button Content="Forget" Margin="5" Command="{Binding ForgetCommand}"/>
+                <Button Content="Restore" Margin="5" Command="{Binding RestoreCommand}"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

@@ -4,6 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Views\MainView.xaml" />
     <None Remove="Views\ShellView.xaml" />
@@ -24,6 +29,8 @@
   <ItemGroup>
     <PackageReference Include="LogoFX.Client.Mvvm.Commanding.Core" Version="1.1.1-rc3" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="LogoFX.Client.Mvvm.Model" Version="1.1.1-rc2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="1.1.1-rc2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,5 +56,8 @@
     <EmbeddedResource Update="Views\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValueConverters\" />
   </ItemGroup>
 </Project>

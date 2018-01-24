@@ -4,7 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Mvvm.Model" Version="1.1.1-rc2" />
-  </ItemGroup>
 </Project>

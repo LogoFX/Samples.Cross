@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Samples.Cross.Forms.Presentation.Shell.ValueConverters"
+    x:Class="Samples.Cross.Forms.Presentation.Shell.Views.WiFiObjectView">
+	<ContentView.Resources>
+        <ResourceDictionary>   
+            <local:ConnectedToTextConverter x:Key="connectedToTextConverter" />
+            <local:EnabledToColorConverter x:Key="enabledToColorConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+        BackgroundColor="{Binding Model.IsEnabled, Converter={StaticResource enabledToColorConverter}">
+                        <Label Text="Wi-Fi Name: " />
+                        <Label Text="{Binding Model.Name}" />
+                        <Label Text="{Binding Model.IsConnected, Converter={StaticResource connectedToTextConverter}}" />
+                    </StackLayout>
+</ContentView>

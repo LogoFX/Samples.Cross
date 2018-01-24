@@ -1,15 +1,14 @@
-﻿using Samples.Cross.Model.Contracts;
+﻿using Samples.Cross.Data.Contracts.Providers;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace Samples.Cross.Model
+namespace Samples.Cross.Data.Fake.Providers
 {
     public class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterSingleton<ILoginService, LoginService>();
-            dependencyRegistrator.RegisterSingleton<IDataService, DataService>();
+            dependencyRegistrator.RegisterSingleton<INetworksProvider, FakeNetworksProvider>();           
         }
     }
 }

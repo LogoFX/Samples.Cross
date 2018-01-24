@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj" />
     <ProjectReference Include="..\Samples.Cross.Model\Samples.Cross.Model.csproj" />
+    <ProjectReference Include="..\Samples.Cross.Data.Fake.Providers\Samples.Cross.Data.Fake.Providers.csproj" />
   </ItemGroup>
 
   <ItemGroup>

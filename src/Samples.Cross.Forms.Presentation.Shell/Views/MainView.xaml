@@ -1,10 +1,41 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cal="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Xamarin.Forms"
              x:Class="Samples.Cross.Forms.Presentation.Shell.Views.MainView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms Main!" />
-      </StackLayout>
-  </ContentView.Content>
+  <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView ItemsSource="{Binding WiFiNetworks}" HasUnevenRows="True" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView cal:View.Model="{Binding}" />    
+                    </ViewCell>                    
+                </DataTemplate>
+            </ListView.ItemTemplate>  
+        </ListView>
+         <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Label Text="Selected item:" />
+            <Label Text="{Binding SelectedItem.Name, Mode=OneWay}"/>
+         </StackLayout>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0">
+                <Button Text="Connect" Margin="5" Command="{Binding ConnectCommand}"/>
+                <Button Text="Disconnect" Margin="5" Command="{Binding DisconnectCommand}"/>
+                <Button Text="Clear" Margin="5" Command="{Binding ClearSelectionCommand}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Button Text="Forget" Margin="5" Command="{Binding ForgetCommand}"/>
+                <Button Text="Restore" Margin="5" Command="{Binding RestoreCommand}"/>
+            </StackLayout>                              
+        </Grid>
+    </Grid>
 </ContentView>
