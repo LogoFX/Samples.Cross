@@ -148,6 +148,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Caliburn.Micro">
+      <Version>4.0.0-alpha.1</Version>
+    </PackageReference>
+    <PackageReference Include="Caliburn.Micro.Core">
+      <Version>4.0.0-alpha.1</Version>
+    </PackageReference>
+    <PackageReference Include="Caliburn.Micro.Xamarin.Forms">
+      <Version>4.0.0-alpha.1</Version>
+    </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer">
       <Version>1.2.1-rc2</Version>
     </PackageReference>
@@ -173,23 +182,6 @@
       <Project>{0aee7a5f-8299-4c7c-b5c9-062a25fcb139}</Project>
       <Name>Samples.Cross.Shared</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.dll</HintPath>
-    </Reference>
-    <Reference Include="Caliburn.Micro.Platform">
-      <HintPath>..\Externals\Caliburn.Micro\uap10.0\Caliburn.Micro.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Platform.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Caliburn.Micro.Xamarin.Forms, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

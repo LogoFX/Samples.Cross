@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Caliburn.Micro.Xamarin.Forms" Version="4.0.0-alpha.1" />
     <PackageReference Include="LogoFX.Client.Bootstrapping.Core" Version="1.7.1-rc2" />
     <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc2" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
@@ -14,12 +15,6 @@
     <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj" />
     <ProjectReference Include="..\Samples.Cross.Model\Samples.Cross.Model.csproj" />
     <ProjectReference Include="..\Samples.Cross.Data.Fake.Providers\Samples.Cross.Data.Fake.Providers.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Caliburn.Micro.Xamarin.Forms">
-      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

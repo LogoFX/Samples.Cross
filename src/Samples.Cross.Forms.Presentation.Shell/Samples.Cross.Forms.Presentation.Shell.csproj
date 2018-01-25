@@ -27,6 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Caliburn.Micro.Core" Version="4.0.0-alpha.1" />
+    <PackageReference Include="Caliburn.Micro.Xamarin.Forms" Version="4.0.0-alpha.1" />
     <PackageReference Include="LogoFX.Client.Mvvm.Commanding.Core" Version="1.1.1-rc3" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="LogoFX.Client.Mvvm.Model" Version="1.1.1-rc2" />
@@ -44,12 +46,6 @@
     <Compile Update="Views\ShellView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Caliburn.Micro">
-      <HintPath>..\Externals\Caliburn.Micro\Caliburn.Micro.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
