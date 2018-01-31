@@ -7,6 +7,7 @@ using Caliburn.Micro;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Samples.Cross.Shared;
+using Solid.Practices.IoC;
 
 namespace Samples.Cross.Droid
 {
@@ -27,8 +28,7 @@ namespace Samples.Cross.Droid
 
         protected override void Configure()
         {
-            ContainerContext.Registrator.RegisterInstance(ContainerContext.Registrator);
-            ContainerContext.Registrator.RegisterSingleton<FormsApp>();            
+            Bridge.Initialize();            
         }
 
         protected override void BuildUp(object instance)

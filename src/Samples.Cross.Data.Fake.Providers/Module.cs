@@ -8,7 +8,7 @@ namespace Samples.Cross.Data.Fake.Providers
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterSingleton<INetworksProvider, FakeNetworksProvider>();           
+            dependencyRegistrator.AddSingleton<INetworksProvider, FakeNetworksProvider>();           
         }
     }
 }

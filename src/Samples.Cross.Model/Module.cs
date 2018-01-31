@@ -8,8 +8,9 @@ namespace Samples.Cross.Model
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterSingleton<ILoginService, LoginService>();
-            dependencyRegistrator.RegisterSingleton<IDataService, DataService>();
+            dependencyRegistrator
+                .AddSingleton<ILoginService, LoginService>()
+                .AddSingleton<IDataService, DataService>();
         }
     }
 }

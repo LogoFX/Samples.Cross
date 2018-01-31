@@ -21,8 +21,7 @@ namespace Samples.Cross.UWP
 
         protected override void Configure()
         {
-            ContainerContext.Registrator.RegisterInstance(ContainerContext.Registrator);
-            ContainerContext.Registrator.RegisterSingleton<FormsApp>();
+           Bridge.Initialize();
         }
 
         protected override void PrepareViewFirst(Frame rootFrame)
