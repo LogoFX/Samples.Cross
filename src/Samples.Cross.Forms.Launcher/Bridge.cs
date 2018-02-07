@@ -9,6 +9,7 @@ namespace Samples.Cross.Forms.Launcher
         {
             ContainerContext.Registrator
                 .AddInstance(ContainerContext.Registrator)
+                .AddInstance(ContainerContext.Resolver)
                 .AddSingleton<FormsApp>();            
         }
     }

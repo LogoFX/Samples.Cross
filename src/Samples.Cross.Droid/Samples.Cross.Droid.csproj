@@ -211,6 +211,21 @@
     <Reference Include="LogoFX.Client.Core.Platform">
       <HintPath>..\packages\LogoFX.Client.Core.1.2.1-rc3\lib\monoandroid403\LogoFX.Client.Core.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Shared">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services.Middleware">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">

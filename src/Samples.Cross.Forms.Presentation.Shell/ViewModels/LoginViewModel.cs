@@ -10,7 +10,7 @@ namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
 namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
 #endif
 {
-    class LoginViewModel : Screen
+    public class LoginViewModel : Screen
     {
         private readonly ILoginService _loginService;
 

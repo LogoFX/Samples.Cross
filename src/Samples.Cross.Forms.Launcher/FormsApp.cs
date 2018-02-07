@@ -2,6 +2,8 @@
 using Caliburn.Micro.Xamarin.Forms;
 using LogoFX.Bootstrapping;
 using LogoFX.Client.Bootstrapping;
+using LogoFX.Client.Mvvm.ViewModel.Services;
+using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Solid.Practices.IoC;
 using Xamarin.Forms;
@@ -19,6 +21,8 @@ namespace Samples.Cross.Forms.Launcher
             _dependencyRegistrator = dependencyRegistrator;
             var bootstrapper =
                 new Bootstrapper(_dependencyRegistrator)
+                    .UseViewModelCreatorService()
+                    .UseViewModelFactory()
                     .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>())
                     .Use(new RegisterViewModelsMiddleware<Bootstrapper>(new Type[] { }));
             bootstrapper.Initialize();

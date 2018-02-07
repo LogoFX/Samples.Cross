@@ -1,4 +1,6 @@
 ﻿using LogoFX.Client.Bootstrapping;
+using LogoFX.Client.Mvvm.ViewModel.Services;
+using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
 
 namespace Samples.Cross.WPF.Launcher
 {
@@ -11,7 +13,9 @@ namespace Samples.Cross.WPF.Launcher
         {
             var bootstrapper = new AppBootstrapper();
             bootstrapper
-                .UseResolver()               
+                .UseResolver() 
+                .UseViewModelCreatorService()
+                .UseViewModelFactory()
                 .Initialize();
         }
     }

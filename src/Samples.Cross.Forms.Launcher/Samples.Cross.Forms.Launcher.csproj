@@ -9,6 +9,9 @@
     <PackageReference Include="LogoFX.Client.Bootstrapping.Core" Version="1.7.1-rc2" />
     <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc4" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer" Version="1.2.1-rc2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="1.2.1-rc2" />
   </ItemGroup>
 
   <ItemGroup>

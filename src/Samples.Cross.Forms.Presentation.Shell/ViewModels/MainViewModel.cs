@@ -3,6 +3,7 @@ using System.Windows.Input;
 using Caliburn.Micro;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel;
+using LogoFX.Client.Mvvm.ViewModel.Services;
 using Samples.Cross.Model.Contracts;
 
 #if NETSTANDARD2_0
@@ -14,24 +15,25 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
     public class MainViewModel : Screen
     {
         private readonly IDataService _dataService;
+        private readonly IViewModelCreatorService _viewModelCreatorService;
 
-        public MainViewModel(IDataService dataService)
+        public MainViewModel(
+            IDataService dataService,
+            IViewModelCreatorService viewModelCreatorService)
         {
             _dataService = dataService;
+            _viewModelCreatorService = viewModelCreatorService;
             DisplayName = "Main";
         }
 
         private WrappingCollection _wifiNetworks;
-        public IEnumerable WiFiNetworks
-        {
-            get { return _wifiNetworks ?? (_wifiNetworks = CreateWiFiNetworks()); }
-        }
+        public IEnumerable WiFiNetworks => _wifiNetworks ?? (_wifiNetworks = CreateWiFiNetworks());
 
         private WrappingCollection CreateWiFiNetworks()
         {
             var wc = new WrappingCollection.WithSelection(SelectionMode.ZeroOrOne)
             {
-                FactoryMethod = (arg) => new WiFiObjectViewModel((IWiFiNetwork) arg)
+                FactoryMethod = arg => _viewModelCreatorService.CreateViewModel<IWiFiNetwork, WiFiObjectViewModel>(arg as IWiFiNetwork)
             };
             wc.AddSource(_dataService.WiFiNetworks);
             return wc;
@@ -108,7 +110,7 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
         private WiFiObjectViewModel _selectedItem;
         public WiFiObjectViewModel SelectedItem
         {
-            get { return _selectedItem; }
+            get => _selectedItem;
             set
             {
                 _selectedItem = value;
@@ -116,7 +118,7 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
             }
         }
 
-        protected async override void OnInitialize()
+        protected override async void OnInitialize()
         {
             base.OnInitialize();
             await _dataService.GetNetworks();                  

@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using Samples.Cross.Model.Contracts;
+using LogoFX.Client.Mvvm.ViewModel.Services;
 
 #if NETSTANDARD2_0
 namespace Samples.Cross.Forms.Presentation.Shell.ViewModels
@@ -9,23 +9,19 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
 {
     public class ShellViewModel : Conductor<object>.Collection.OneActive
     {
-        private readonly ILoginService _loginService;
-        private readonly IDataService _dataService;
+        private readonly IViewModelCreatorService _viewModelCreatorService;
 
-        public ShellViewModel(
-            ILoginService loginService,
-            IDataService dataService)
-        {            
-            _loginService = loginService;
-            _dataService = dataService;
+        public ShellViewModel(           
+            IViewModelCreatorService viewModelCreatorService)
+        {
+            _viewModelCreatorService = viewModelCreatorService;
         }
 
         protected override void OnInitialize()
         {
             base.OnInitialize();
-            //TODO: Use View Model factory
-            var loginViewModel = new LoginViewModel(_loginService);
-            var mainViewModel = new MainViewModel(_dataService);
+            var loginViewModel = _viewModelCreatorService.CreateViewModel<LoginViewModel>();
+            var mainViewModel = _viewModelCreatorService.CreateViewModel<MainViewModel>();
             Items.Add(loginViewModel);
             Items.Add(mainViewModel);
             ActivateItem(loginViewModel);
