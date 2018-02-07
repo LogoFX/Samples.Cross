@@ -1,11 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
 using Caliburn.Micro;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel;
-using LogoFX.Core;
 using Samples.Cross.Model.Contracts;
 
 #if NETSTANDARD2_0
@@ -24,12 +21,21 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
             DisplayName = "Main";
         }
 
-        private readonly ObservableCollection<WiFiObjectViewModel> _wifiNetworks = new ObservableCollection<WiFiObjectViewModel>();
+        private WrappingCollection _wifiNetworks;
         public IEnumerable WiFiNetworks
         {
-            get { return _wifiNetworks; }
+            get { return _wifiNetworks ?? (_wifiNetworks = CreateWiFiNetworks()); }
         }
 
+        private WrappingCollection CreateWiFiNetworks()
+        {
+            var wc = new WrappingCollection.WithSelection(SelectionMode.ZeroOrOne)
+            {
+                FactoryMethod = (arg) => new WiFiObjectViewModel((IWiFiNetwork) arg)
+            };
+            wc.AddSource(_dataService.WiFiNetworks);
+            return wc;
+        }
 
         private ICommand _connectCommand;
         public ICommand ConnectCommand
@@ -113,12 +119,7 @@ namespace Samples.Cross.WPF.Presentation.Shell.ViewModels
         protected async override void OnInitialize()
         {
             base.OnInitialize();
-            await _dataService.GetNetworks();
-            _wifiNetworks.Clear();
-            foreach (var network in _dataService.WiFiNetworks)
-            {
-                _wifiNetworks.Add(new WiFiObjectViewModel(network));
-            }            
+            await _dataService.GetNetworks();                  
         }
     }
 
