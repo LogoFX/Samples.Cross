@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Windows.Threading;
 using Caliburn.Micro;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
@@ -17,7 +18,8 @@ namespace Samples.Cross.iOS
 
         protected override void Configure()
         {
-            Bridge.Initialize();            
+            Bridge.Initialize();
+            Dispatch.Current = new PlatformDispatch();
         }
 
         protected override void BuildUp(object instance)
