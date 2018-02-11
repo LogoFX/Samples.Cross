@@ -51,6 +51,33 @@
     <Reference Include="Caliburn.Micro.Platform.Xamarin.Forms, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Platform.Xamarin.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc3\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services.Middleware, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc3\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Container, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
     </Reference>
@@ -136,21 +163,6 @@
     <Reference Include="Solid.Practices.Modularity">
       <HintPath>..\packages\Solid.Practices.Modularity.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Container">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Composition.Container.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Practices.Composition.Contracts">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Composition.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Practices.Composition">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Bootstrapping">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc3\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Bootstrapping.Middleware">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc3\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
-    </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping">
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.1-rc2\lib\netstandard2.0\LogoFX.Client.Bootstrapping.dll</HintPath>
     </Reference>
@@ -189,12 +201,6 @@
     <Reference Include="Solid.Patterns.Memento">
       <HintPath>..\packages\Solid.Patterns.Memento.1.2.1-rc2\lib\netstandard2.0\Solid.Patterns.Memento.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.Model.Contracts">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.Model">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
-    </Reference>
     <Reference Include="Solid.Practices.Scheduling">
       <HintPath>..\packages\Solid.Practices.Scheduling.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
@@ -216,12 +222,6 @@
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services.Middleware">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.dll</HintPath>

@@ -11,7 +11,7 @@
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc2" />
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer" Version="1.2.1-rc2" />
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="1.2.1-rc2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="1.2.1-rc3" />
   </ItemGroup>
 
   <ItemGroup>
