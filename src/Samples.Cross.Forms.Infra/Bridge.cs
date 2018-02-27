@@ -3,18 +3,19 @@ using Solid.Practices.IoC;
 
 namespace Samples.Cross.Forms.Infra
 {
-    public class Bridge<TApp, TBootstrapper, TContainerAdapter>
+    public class Bridge<TApp, TBootstrapper>
         where TApp : class
         where TBootstrapper : BootstrapperBase
-        where TContainerAdapter : IDependencyRegistrator, IDependencyResolver, IBootstrapperAdapter, new()
     {
-        public static void Initialize()
+        public static void Initialize<TContainerAdapter>(TContainerAdapter containerAdapter)
+            where TContainerAdapter : IDependencyRegistrator, IDependencyResolver, IBootstrapperAdapter
         {
-            ContainerContext<TContainerAdapter>.Registrator.RegisterInstance(ContainerContext<TContainerAdapter>.Registrator);
-            ContainerContext<TContainerAdapter>.Registrator.RegisterInstance(ContainerContext<TContainerAdapter>.Resolver);
-            ContainerContext<TContainerAdapter>.Registrator.RegisterSingleton<TApp>();
-            ContainerContext<TContainerAdapter>.Registrator.RegisterSingleton<TBootstrapper>();
-            ContainerContext<TContainerAdapter>.Registrator.RegisterSingleton<BootstrapperBase, TBootstrapper>();
+            ContainerContext.SetAdapter(containerAdapter);
+            ContainerContext.Registrator.RegisterInstance(ContainerContext.Registrator);
+            ContainerContext.Registrator.RegisterInstance(ContainerContext.Resolver);
+            ContainerContext.Registrator.RegisterSingleton<TApp>();
+            ContainerContext.Registrator.RegisterSingleton<TBootstrapper>();
+            ContainerContext.Registrator.RegisterSingleton<BootstrapperBase, TBootstrapper>();
         }
     }
 }

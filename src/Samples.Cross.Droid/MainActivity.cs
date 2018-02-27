@@ -17,7 +17,7 @@ namespace Samples.Cross.Droid
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            LoadApplication(ContainerContext<ExtendedSimpleContainerAdapter>.Resolver.Resolve<FormsApp>());
+            LoadApplication(ContainerContext.Resolver.Resolve<FormsApp>());
         }
     }
 }

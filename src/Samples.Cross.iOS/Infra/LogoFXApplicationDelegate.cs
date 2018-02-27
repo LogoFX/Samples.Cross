@@ -20,23 +20,23 @@ namespace Samples.Cross.iOS.Infra
 
         protected override void Configure()
         {
-            Bridge<TApp, TBootstrapper, TContainerAdapter>.Initialize();
+            Bridge<TApp, TBootstrapper>.Initialize(new TContainerAdapter());
             Dispatch.Current = new PlatformDispatch();
         }
 
         protected override void BuildUp(object instance)
         {
-            ContainerContext<TContainerAdapter>.Adapter.BuildUp(instance);
+            ContainerContext.Adapter.BuildUp(instance);
         }
 
         protected override IEnumerable<object> GetAllInstances(Type service)
         {
-            return ContainerContext<TContainerAdapter>.Adapter.GetAllInstances(service);
+            return ContainerContext.Adapter.GetAllInstances(service);
         }
 
         protected override object GetInstance(Type service, string key)
         {
-            return ContainerContext<TContainerAdapter>.Adapter.GetInstance(service, key);
+            return ContainerContext.Adapter.GetInstance(service, key);
         }
 
     }

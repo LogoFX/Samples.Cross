@@ -22,7 +22,7 @@ namespace Samples.Cross.iOS
 #if DEBUG
             Xamarin.Calabash.Start();
 #endif
-            LoadApplication(ContainerContext<ExtendedSimpleContainerAdapter>.Resolver.Resolve<FormsApp>());
+            LoadApplication(ContainerContext.Resolver.Resolve<FormsApp>());
 
             return base.FinishedLaunching(app, options);
         }
