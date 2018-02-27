@@ -232,13 +232,13 @@
       <Project>{6F07F77F-AA28-4ADD-B0F8-A3CB67DA21FE}</Project>
       <Name>Samples.Cross.Forms.Launcher</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
-      <Project>{0AEE7A5F-8299-4C7C-B5C9-062A25FCB139}</Project>
-      <Name>Samples.Cross.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj">
       <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
       <Name>Samples.Cross.Forms.Presentation.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Cross.Forms.Infra\Samples.Cross.Forms.Infra.csproj">
+      <Project>{E32A633C-66DE-46E5-ABF5-410FE916586F}</Project>
+      <Name>Samples.Cross.Forms.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +246,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="Infra\LogoFXApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -262,6 +263,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infra\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />

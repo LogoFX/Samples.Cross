@@ -1,6 +1,7 @@
 ﻿using Foundation;
+using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
+using Samples.Cross.Forms.Infra;
 using Samples.Cross.Forms.Launcher;
-using Samples.Cross.Shared;
 using UIKit;
 
 namespace Samples.Cross.iOS
@@ -11,7 +12,7 @@ namespace Samples.Cross.iOS
     [Register("AppDelegate")]
     public class AppDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        private readonly CaliburnAppDelegate appDelegate = new CaliburnAppDelegate();
+        private readonly ApplicationDelegate appDelegate = new ApplicationDelegate();
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
@@ -21,7 +22,7 @@ namespace Samples.Cross.iOS
 #if DEBUG
             Xamarin.Calabash.Start();
 #endif
-            LoadApplication(ContainerContext.Resolver.Resolve<FormsApp>());
+            LoadApplication(ContainerContext<ExtendedSimpleContainerAdapter>.Resolver.Resolve<FormsApp>());
 
             return base.FinishedLaunching(app, options);
         }

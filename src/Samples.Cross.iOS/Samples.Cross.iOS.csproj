@@ -225,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Infra\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -237,7 +238,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="CaliburnAppDelegate.cs" />
+    <Compile Include="Infra\LogoFXApplicationDelegate.cs" />
+    <Compile Include="ApplicationDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
@@ -248,9 +250,9 @@
       <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
       <Name>Samples.Cross.Forms.Presentation.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
-      <Project>{0AEE7A5F-8299-4C7C-B5C9-062A25FCB139}</Project>
-      <Name>Samples.Cross.Shared</Name>
+    <ProjectReference Include="..\Samples.Cross.Forms.Infra\Samples.Cross.Forms.Infra.csproj">
+      <Project>{E32A633C-66DE-46E5-ABF5-410FE916586F}</Project>
+      <Name>Samples.Cross.Forms.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

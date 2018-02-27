@@ -1,37 +1,16 @@
-﻿using System;
-using Caliburn.Micro.Xamarin.Forms;
-using LogoFX.Bootstrapping;
-using LogoFX.Client.Bootstrapping;
-using LogoFX.Client.Mvvm.ViewModel.Services;
-using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
+﻿using Samples.Cross.Forms.Infra;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Solid.Practices.IoC;
-using Xamarin.Forms;
 
 namespace Samples.Cross.Forms.Launcher
 {
-    public class FormsApp : FormsApplication
+    public class FormsApp : LogoFXApplication<ShellViewModel>
     {
-        private readonly IDependencyRegistrator _dependencyRegistrator;
-
-        public FormsApp(IDependencyRegistrator dependencyRegistrator)
-        {
-            Initialize();
-                       
-            _dependencyRegistrator = dependencyRegistrator;
-            var bootstrapper =
-                new Bootstrapper(_dependencyRegistrator)
-                    .UseViewModelCreatorService()
-                    .UseViewModelFactory()
-                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>())
-                    .Use(new RegisterViewModelsMiddleware<Bootstrapper>(new Type[] { }));
-            bootstrapper.Initialize();
-            DisplayRootViewFor<ShellViewModel>();
-        }
-
-        protected override void PrepareViewFirst(NavigationPage navigationPage)
-        {
-            _dependencyRegistrator.RegisterInstance<INavigationService>(new NavigationPageAdapter(navigationPage));
+        public FormsApp(BootstrapperBase bootstrapper, IDependencyRegistrator dependencyRegistrator) :
+        base(
+            bootstrapper.UseMiddlewares(), 
+            dependencyRegistrator)
+        {            
         }
     }
 }
