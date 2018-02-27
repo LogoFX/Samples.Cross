@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Solid.Bootstrapping;
@@ -53,7 +55,18 @@ namespace Samples.Cross.Forms.Infra
 
         private IEnumerable<Assembly> _assemblies;
         public IEnumerable<Assembly> Assemblies => _assemblies ??
-            (_assemblies = System.AppDomain.CurrentDomain.GetAssemblies().FilterByPrefixes(Prefixes));
+            (_assemblies = LoadAssemblies().FilterByPrefixes(Prefixes));
+
+        private IEnumerable<Assembly> LoadAssemblies()
+        {
+            var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            var loadedPaths = loadedAssemblies.Select(a => a.Location).ToArray();
+
+            var referencedPaths = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll");
+            var toLoad = referencedPaths.Where(r => !loadedPaths.Contains(r, StringComparer.InvariantCultureIgnoreCase)).ToList();
+            toLoad.ForEach(path => loadedAssemblies.Add(AppDomain.CurrentDomain.Load(AssemblyName.GetAssemblyName(path))));
+            return loadedAssemblies;
+        }
 
         private void InitializeCompositionModules()
         {
