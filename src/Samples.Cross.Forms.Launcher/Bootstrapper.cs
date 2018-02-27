@@ -1,5 +1,5 @@
 ﻿using System;
-using Samples.Cross.Forms.Infra;
+using LogoFX.Client.Bootstrapping.Xamarin.Forms;
 using Solid.Practices.IoC;
 
 namespace Samples.Cross.Forms.Launcher

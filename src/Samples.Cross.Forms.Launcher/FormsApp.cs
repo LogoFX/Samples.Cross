@@ -1,4 +1,4 @@
-﻿using Samples.Cross.Forms.Infra;
+﻿using LogoFX.Client.Bootstrapping.Xamarin.Forms;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 using Solid.Practices.IoC;
 

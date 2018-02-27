@@ -1,8 +1,8 @@
 ﻿using System;
 using LogoFX.Client.Bootstrapping;
+using LogoFX.Client.Bootstrapping.Xamarin.Forms;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
-using Samples.Cross.Forms.Infra;
 
 namespace Samples.Cross.Forms.Launcher
 {

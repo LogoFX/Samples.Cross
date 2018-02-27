@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using Android.App;
 using Android.Runtime;
+using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
-using Samples.Cross.Droid.Infra;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
 

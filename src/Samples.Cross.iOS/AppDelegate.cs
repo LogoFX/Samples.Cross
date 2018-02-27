@@ -1,6 +1,5 @@
 ﻿using Foundation;
-using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
-using Samples.Cross.Forms.Infra;
+using LogoFX.Client.Bootstrapping.Xamarin.Forms;
 using Samples.Cross.Forms.Launcher;
 using UIKit;
 

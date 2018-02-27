@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
-using Samples.Cross.iOS.Infra;
 
 namespace Samples.Cross.iOS
 {
