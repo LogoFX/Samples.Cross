@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using Solid.Bootstrapping;
@@ -38,10 +37,14 @@ namespace Samples.Cross.Forms.Infra
         /// <value>
         /// The prefixes.
         /// </value>
-        public virtual string[] Prefixes
-        {
-            get { return new string[] { }; }
-        }
+        public virtual string[] Prefixes => new string[] { };
+
+        /// <summary>
+        /// Gets the additional types which can extend the list of assemblies
+        /// to be inspected for app components. Use this to add dynamic assemblies.
+        /// </summary>
+        /// <value>The additional types.</value>
+        public virtual Type[] AdditionalTypes => new Type[] { };
 
         /// <summary>
         /// Gets the list of modules that were discovered during bootstrapper configuration.
@@ -59,13 +62,7 @@ namespace Samples.Cross.Forms.Infra
 
         private IEnumerable<Assembly> LoadAssemblies()
         {
-            var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
-            var loadedPaths = loadedAssemblies.Select(a => a.Location).ToArray();
-
-            var referencedPaths = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll");
-            var toLoad = referencedPaths.Where(r => !loadedPaths.Contains(r, StringComparer.InvariantCultureIgnoreCase)).ToList();
-            toLoad.ForEach(path => loadedAssemblies.Add(AppDomain.CurrentDomain.Load(AssemblyName.GetAssemblyName(path))));
-            return loadedAssemblies;
+            return AppDomain.CurrentDomain.GetAssemblies();
         }
 
         private void InitializeCompositionModules()

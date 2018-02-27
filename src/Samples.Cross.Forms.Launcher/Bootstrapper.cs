@@ -1,4 +1,5 @@
-﻿using Samples.Cross.Forms.Infra;
+﻿using System;
+using Samples.Cross.Forms.Infra;
 using Solid.Practices.IoC;
 
 namespace Samples.Cross.Forms.Launcher
@@ -18,5 +19,11 @@ namespace Samples.Cross.Forms.Launcher
                 return new[] { "Samples.Cross" };
             }
         }
+
+        public override Type[] AdditionalTypes => new[]
+                {
+                    typeof(Samples.Cross.Model.Module),
+                    typeof(Samples.Cross.Data.Fake.Providers.Module)
+        };    
     }
 }
