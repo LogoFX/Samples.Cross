@@ -5,7 +5,7 @@ namespace Samples.Cross.Forms.Launcher
 {
     public class FormsApp : LogoFXApplication<ShellViewModel>
     {
-        public FormsApp(BootstrapperBase bootstrapper) :
+        public FormsApp(Bootstrapper bootstrapper) :
         base(
             bootstrapper.UseMiddlewares())
         {            
