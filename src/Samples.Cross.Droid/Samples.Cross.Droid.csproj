@@ -48,9 +48,6 @@
     <Reference Include="Caliburn.Micro.Platform.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.4.0.0-alpha.1\lib\monoandroid403\Caliburn.Micro.Platform.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Caliburn.Micro.Platform.Xamarin.Forms, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Platform.Xamarin.Forms.dll</HintPath>
-    </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
@@ -227,10 +224,13 @@
       <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Platform">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Xamarin.Forms.1.7.1-rc1\lib\monoandroid403\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Xamarin.Forms.1.7.1-rc3\lib\monoandroid403\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Xamarin.Forms">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Xamarin.Forms.1.7.1-rc1\lib\monoandroid403\LogoFX.Client.Bootstrapping.Xamarin.Forms.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Xamarin.Forms.1.7.1-rc3\lib\monoandroid403\LogoFX.Client.Bootstrapping.Xamarin.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Xamarin.Forms">
+      <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Platform.Xamarin.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
