@@ -231,6 +231,10 @@
     </Reference>
     <Reference Include="Caliburn.Micro.Platform.Xamarin.Forms">
       <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Platform.Xamarin.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Xamarin.Forms">
+      <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

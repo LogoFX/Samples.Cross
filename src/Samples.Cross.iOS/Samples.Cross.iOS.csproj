@@ -218,7 +218,10 @@
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Xamarin.Forms.1.7.1-rc3\lib\xamarin.ios10\LogoFX.Client.Bootstrapping.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Caliburn.Micro.Platform.Xamarin.Forms">
-      <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Platform.Xamarin.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Xamarin.Forms">
+      <HintPath>..\packages\Caliburn.Micro.Xamarin.Forms.4.0.0-alpha.1\lib\netstandard1.4\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
