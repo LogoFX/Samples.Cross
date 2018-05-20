@@ -1,5 +1,5 @@
-﻿using Samples.Cross.Forms.Launcher;
-using Samples.Cross.Shared;
+﻿using LogoFX.Client.Bootstrapping.Xamarin.Forms;
+using Samples.Cross.Forms.Launcher;
 
 namespace Samples.Cross.UWP
 {

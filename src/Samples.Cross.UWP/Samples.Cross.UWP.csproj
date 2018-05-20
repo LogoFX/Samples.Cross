@@ -11,7 +11,7 @@
     <AssemblyName>Samples.Cross.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
@@ -161,13 +161,13 @@
       <Version>1.2.1-rc2</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Core">
-      <Version>1.7.1-rc2</Version>
+      <Version>1.7.1-rc3</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Scheduling">
-      <Version>1.2.1-rc2</Version>
+      <Version>1.2.1-rc3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Cross.Forms.Launcher\Samples.Cross.Forms.Launcher.csproj">
@@ -177,10 +177,6 @@
     <ProjectReference Include="..\Samples.Cross.Forms.Presentation.Shell\Samples.Cross.Forms.Presentation.Shell.csproj">
       <Project>{0F3B575D-3E4E-4D88-9A18-4080393562E3}</Project>
       <Name>Samples.Cross.Forms.Presentation.Shell</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Cross.Shared\Samples.Cross.Shared.csproj">
-      <Project>{0aee7a5f-8299-4c7c-b5c9-062a25fcb139}</Project>
-      <Name>Samples.Cross.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

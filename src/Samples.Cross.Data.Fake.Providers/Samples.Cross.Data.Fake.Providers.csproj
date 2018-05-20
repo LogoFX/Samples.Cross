@@ -8,7 +8,7 @@
     <ProjectReference Include="..\Samples.Cross.Data.Contracts.Providers\Samples.Cross.Data.Contracts.Providers.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc4" />
-    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc2" />
+    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc5" />
+    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc3" />
   </ItemGroup>
 </Project>

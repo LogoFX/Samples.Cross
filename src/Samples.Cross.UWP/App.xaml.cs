@@ -5,9 +5,10 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 using Caliburn.Micro;
+using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
+using LogoFX.Client.Bootstrapping.Xamarin.Forms;
 using Samples.Cross.Forms.Launcher;
 using Samples.Cross.Forms.Presentation.Shell.ViewModels;
-using Samples.Cross.Shared;
 using UnhandledExceptionEventArgs = Windows.UI.Xaml.UnhandledExceptionEventArgs;
 
 namespace Samples.Cross.UWP
@@ -21,7 +22,7 @@ namespace Samples.Cross.UWP
 
         protected override void Configure()
         {
-           Bridge.Initialize();
+           Bridge<FormsApp,Bootstrapper>.Initialize(new ExtendedSimpleContainerAdapter());
         }
 
         protected override void PrepareViewFirst(Frame rootFrame)
